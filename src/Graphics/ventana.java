@@ -116,7 +116,7 @@ public class ventana extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre");
 
-        jLabel2.setText("Numero");
+        jLabel2.setText("Número");
 
         jLabel3.setText("Email");
 
@@ -414,6 +414,7 @@ public class ventana extends javax.swing.JFrame {
 
             agenda.set(i,op.modificar(aux, Name.getText(), Number.getText(), Email.getText(), Alias.getText()));
         }
+        op.ordenar(agenda);
         this.show_elements(agenda);
         f.insert_element(agenda);
     }//GEN-LAST:event_EditActionPerformed

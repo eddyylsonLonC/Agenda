@@ -38,27 +38,7 @@ public class Agenda implements Serializable {
         
      }
 
-   public List ordenar (List <String> nombres)
-    {
-        String aux="";
-      for (int i=0;i< nombres.size();i++)
-      {
-          for (int j=0;j < nombres.size() ;j++)
-          {
-              if (nombres.get(i).compareToIgnoreCase(nombres.get(j)) < 0)
-              {
-                  aux= nombres.get(i);
-                 System.out.println( "aux : "+ aux );
-                  nombres.set(i, nombres.get(j));
-                  nombres.set(j,aux);
-                 // System.out.println(i + " " + j);
-                 // System.out.println(nombres);
-              }
-          }
-      }
-      return nombres;
-    }
-    
+
     public List Quicksort (List <String> nombres,int izq,int der)
     {
         
