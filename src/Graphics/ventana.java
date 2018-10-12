@@ -33,6 +33,7 @@ public class ventana extends javax.swing.JFrame {
     public ventana() {
         initComponents();
         agenda=f.read_elements();
+        agenda=op.ordenar(agenda);
         Export.setVisible(false);
         Import.setVisible(false);
         textFIle.setVisible(false);
@@ -447,6 +448,7 @@ public class ventana extends javax.swing.JFrame {
             {
             System.out.println(agenda);
             f.insert_element(agenda);
+            agenda=op.ordenar(agenda);
             this.show_elements(agenda);
             this.Alias.setText("");
             this.Email.setText("");

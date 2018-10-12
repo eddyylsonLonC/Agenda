@@ -49,4 +49,24 @@ public class Operaciones_agenda {
     }
     
     public void eliminar (List <Agenda> agenda,Agenda elemento){agenda.remove(elemento);}
+    
+    public List <Agenda> ordenar (List <Agenda> agenda)
+    {
+        Agenda aux;
+        for (int i=0; i<agenda.size();i++)
+        {
+            for (int j=0;j<agenda.size();j++)
+            {
+                if (agenda.get(i).getNombres().compareToIgnoreCase(agenda.get(j).getNombres()) < 0)
+                {
+                    aux= agenda.get(i);
+                    agenda.set(i, agenda.get(j));
+                    agenda.set(j, aux);
+                    
+                }
+            }
+                
+        }
+        return agenda;
+    }
 }

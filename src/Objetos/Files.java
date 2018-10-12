@@ -8,7 +8,6 @@ import Graphics.Graphics;
 import java.io.File;
 import java.util.List;
 import java.util.LinkedList;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -92,7 +91,7 @@ public class Files {
             {
             String exportlist =""; 
             exportlist=a.alias + ";" + a.correo_electronico + ";" + a.nombres + ";" + a.telefono;
-            System.out.println(exportlist);
+           
             bf.write(exportlist);
             bf.newLine();
             
@@ -126,7 +125,7 @@ public class Files {
             {
                 try
                 {
-                int telefonoAux;
+                long telefonoAux;
                 aux = elemento.split(";");
                 String nombres=aux[2];
                 String correo=aux[1];
@@ -135,7 +134,7 @@ public class Files {
                 
                 try
                 {
-                    telefonoAux=Integer.parseInt(telefono);
+                    telefonoAux=Integer.parseUnsignedInt(telefono);
                     Agenda a = new Agenda(nombres,telefono,correo,alias);
                      ag.add(a);
                 }catch (NumberFormatException nfe)
@@ -145,7 +144,7 @@ public class Files {
               
                 }catch (ArrayIndexOutOfBoundsException e)
                 {
-                    System.out.println("error file");
+                   
                     Graphics g = new Graphics(200,200);
                 }
             }
