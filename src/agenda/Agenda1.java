@@ -4,14 +4,9 @@
  * and open the template in the editor.
  */
 package agenda;
-import java.util.List;
-import java.util.LinkedList;
-import Objetos.Agenda;
-import Objetos.Files;
-import Objetos.Operaciones_agenda;
-import Graphics.Graphics;
+
 import Graphics.ventana;
-import javax.swing.JFrame;
+
 
 
 
