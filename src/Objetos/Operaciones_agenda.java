@@ -48,7 +48,7 @@ public class Operaciones_agenda {
     
     }
     
-    public void eliminar (List <Agenda> agenda,Agenda elemento){agenda.remove(elemento);}
+    public void eliminar (List <Agenda> agenda,Agenda elemento){ agenda.remove(elemento); }
     
     public List <Agenda> ordenar (List <Agenda> agenda)
     {

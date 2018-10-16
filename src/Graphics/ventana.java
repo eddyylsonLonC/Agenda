@@ -424,7 +424,7 @@ public class ventana extends javax.swing.JFrame {
         for (int i=0;i< agenda.size();i++)
         {
             Agenda aux=(Agenda) agenda.get(i);
-            if (aux.getNombres().equals(nombre)){
+            if (aux.getTelefono().equals(numero)){
                 op.eliminar(agenda, aux);
             }
         }
